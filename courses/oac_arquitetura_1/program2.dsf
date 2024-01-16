@@ -1,0 +1,34 @@
+call main
+jmp end
+
+# Inicia variáveis
+init_var:
+    buffer
+
+    menosUm
+    move -1 %RPG0
+    move %RPG0 menosUm
+    ret
+
+# Calcula fib(%RPG3)
+fibonacci:
+    move 0 %RPG0
+    move 1 %RPG1
+    move 4 %RPG3
+    
+    loop1:
+        move %RPG1 buffer
+        add %RPG0 %RPG1
+        move buffer %RPG0
+        add menosUm %RPG3
+    jnz loop1
+
+    ret
+
+# Função principal
+main:
+    call init_var
+    call fibonacci
+    ret
+
+end:

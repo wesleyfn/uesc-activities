@@ -1,0 +1,6 @@
+move 1 %RPG0
+
+
+loop:
+    add %RPG0 %RPG3
+jgt %RPG1 %RPG0 loop
