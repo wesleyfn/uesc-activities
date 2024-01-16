@@ -1,0 +1,1 @@
+# uesc-activities
